@@ -1,0 +1,513 @@
+{
+  "schema_version": 1,
+  "trace_file": "cytus2_a.pftrace",
+  "meta": {
+    "window_s": 29.920215666,
+    "android_sdk": 35,
+    "build_fingerprint": "samsung/e2qzhx/e2q:15/AP3A.240905.015.A2/S9260ZHS4BYG1:user/release-keys",
+    "data_sources": {
+      "frame_timeline": true,
+      "sched": true,
+      "cpufreq": true,
+      "gpufreq": false,
+      "thermal": false,
+      "sidecar": true
+    },
+    "ftrace_setup_errors": [
+      "Ftrace event unknown: power/gpu_frequency"
+    ]
+  },
+  "target": {
+    "available": true,
+    "reason": "auto: most frames (0 FrameTimeline frames, 3602 queueBuffer calls); next: com.android.systemui (15 FrameTimeline frames, 15 queueBuffer calls)",
+    "upid": 2,
+    "pid": 26171,
+    "name": "com.rayark.cytus2"
+  },
+  "topology": {
+    "available": true,
+    "reason": null,
+    "ordering_basis": "max_available_freq",
+    "clusters": [
+      {
+        "name": "little",
+        "rank": 0,
+        "cpus": [
+          0,
+          1
+        ],
+        "capacity": null,
+        "max_freq_khz": 2265600
+      },
+      {
+        "name": "mid",
+        "rank": 1,
+        "cpus": [
+          5,
+          6
+        ],
+        "capacity": null,
+        "max_freq_khz": 2956800
+      },
+      {
+        "name": "big",
+        "rank": 2,
+        "cpus": [
+          2,
+          3,
+          4
+        ],
+        "capacity": null,
+        "max_freq_khz": 3148800
+      },
+      {
+        "name": "prime",
+        "rank": 3,
+        "cpus": [
+          7
+        ],
+        "capacity": null,
+        "max_freq_khz": 3398400
+      }
+    ]
+  },
+  "frames": {
+    "available": true,
+    "reason": null,
+    "frame_source": "queue_buffer",
+    "layer_name": "thread:UnityMain",
+    "layers": {
+      "thread:UnityMain": 3139,
+      "thread:NDK MediaCodec_": 463
+    },
+    "present_time_source": "app_queue_buffer",
+    "frame_count": 3139,
+    "presented_frame_count": 3139,
+    "dropped_frame_count": null,
+    "duration_s": 29.619356916,
+    "avg_fps": 109.68207232218526,
+    "fps_1pct_low": 12.60719812909747,
+    "frame_interval_ms": {
+      "count": 3137,
+      "mean": 9.117260267134204,
+      "p50": 8.349322,
+      "p90": 9.523114600000001,
+      "p99": 24.374560479999978,
+      "max": 372.588385
+    },
+    "idle_gap_count": 1,
+    "slow_frame_count": 80,
+    "slow_frame_rate": 0.025502072043353523,
+    "jank": null,
+    "present_type_counts": {},
+    "on_time_finish_rate": null,
+    "segments": [
+      {
+        "label": "early",
+        "start_s": 0.0,
+        "end_s": 9.873118972,
+        "frame_count": 1128,
+        "avg_fps": 114.24240278822258,
+        "jank_rate": null
+      },
+      {
+        "label": "mid",
+        "start_s": 9.873118972,
+        "end_s": 19.746237944,
+        "frame_count": 1184,
+        "avg_fps": 119.89282621082984,
+        "jank_rate": null
+      },
+      {
+        "label": "late",
+        "start_s": 19.746237944,
+        "end_s": 29.619356916,
+        "frame_count": 827,
+        "avg_fps": 93.22409516097042,
+        "jank_rate": null
+      }
+    ]
+  },
+  "threads": {
+    "available": true,
+    "reason": null,
+    "window_ms": 29920.215666,
+    "threads": [
+      {
+        "utid": 7454,
+        "tid": 26265,
+        "name": "UnityMain",
+        "role": "game_logic",
+        "identified_by": "name",
+        "running_ms": 17021.085691,
+        "runnable_ms": 773.089868,
+        "uninterruptible_ms": 170.263227,
+        "sleeping_ms": 11953.170736,
+        "cpu_util": 0.568882453288664,
+        "runnable_ratio": 0.043446231348941815,
+        "cluster_share": {
+          "big": 0.5766257158431223,
+          "prime": 0.4233742841568778
+        }
+      },
+      {
+        "utid": 9555,
+        "tid": 29454,
+        "name": "NDK MediaCodec_",
+        "role": "top_cpu",
+        "identified_by": "top_cpu",
+        "running_ms": 2101.301048,
+        "runnable_ms": 2818.497882,
+        "uninterruptible_ms": 0.0,
+        "sleeping_ms": 14891.430073,
+        "cpu_util": 0.0702301437749269,
+        "runnable_ratio": 0.5728888359264714,
+        "cluster_share": {
+          "little": 0.09577823186808786,
+          "mid": 0.9042217681319121
+        }
+      },
+      {
+        "utid": 7478,
+        "tid": 26468,
+        "name": "Thread-98",
+        "role": "top_cpu",
+        "identified_by": "top_cpu",
+        "running_ms": 1729.448787,
+        "runnable_ms": 2322.472019,
+        "uninterruptible_ms": 3.127553,
+        "sleeping_ms": 25750.830744,
+        "cpu_util": 0.057802016078556166,
+        "runnable_ratio": 0.5731780383172671,
+        "cluster_share": {
+          "big": 0.9620894342215639,
+          "prime": 0.03791056577843609
+        }
+      },
+      {
+        "utid": 7479,
+        "tid": 26469,
+        "name": "Thread-96",
+        "role": "top_cpu",
+        "identified_by": "top_cpu",
+        "running_ms": 1725.725362,
+        "runnable_ms": 2286.399638,
+        "uninterruptible_ms": 2.168177,
+        "sleeping_ms": 25791.583166,
+        "cpu_util": 0.05767757095284034,
+        "runnable_ratio": 0.5698724835342867,
+        "cluster_share": {
+          "big": 0.9670900357318849,
+          "prime": 0.0329099642681151
+        }
+      },
+      {
+        "utid": 7477,
+        "tid": 26467,
+        "name": "Thread-97",
+        "role": "top_cpu",
+        "identified_by": "top_cpu",
+        "running_ms": 1701.276839,
+        "runnable_ms": 2276.111992,
+        "uninterruptible_ms": 14.68198,
+        "sleeping_ms": 25813.80298,
+        "cpu_util": 0.05686044706332967,
+        "runnable_ratio": 0.5722628811796953,
+        "cluster_share": {
+          "big": 0.970456605387314,
+          "prime": 0.02954339461268596
+        }
+      },
+      {
+        "utid": 7480,
+        "tid": 26470,
+        "name": "Thread-99",
+        "role": "top_cpu",
+        "identified_by": "top_cpu",
+        "running_ms": 1696.962353,
+        "runnable_ms": 2351.212938,
+        "uninterruptible_ms": 7.387552,
+        "sleeping_ms": 25750.322146,
+        "cpu_util": 0.05671624736743968,
+        "runnable_ratio": 0.5808080848740105,
+        "cluster_share": {
+          "big": 0.9646225327899186,
+          "prime": 0.03537746721008135
+        }
+      },
+      {
+        "utid": 6,
+        "tid": 26171,
+        "name": "m.rayark.cytus2",
+        "role": "main",
+        "identified_by": "main_thread",
+        "running_ms": 196.404015,
+        "runnable_ms": 126.300477,
+        "uninterruptible_ms": 0.0,
+        "sleeping_ms": 28149.233414,
+        "cpu_util": 0.006564257998420271,
+        "runnable_ratio": 0.3913812175877614,
+        "cluster_share": {
+          "big": 0.8934606963101034,
+          "mid": 0.015446746340699808,
+          "prime": 0.09109255734919676
+        }
+      }
+    ],
+    "process_running_ms": 36779.675336,
+    "process_cluster_share": {
+      "little": 0.02470124112571367,
+      "big": 0.6210881747409235,
+      "mid": 0.0886661689155265,
+      "prime": 0.2655444152178364
+    }
+  },
+  "cpufreq": {
+    "available": true,
+    "reason": null,
+    "clusters": [
+      {
+        "cluster": "little",
+        "cpus": [
+          0,
+          1
+        ],
+        "hw_max_mhz": 2265.6,
+        "min_mhz": 672.0,
+        "max_mhz": 1804.8,
+        "avg_mhz": 1338.8399858992916,
+        "avg_vs_hw_max": 0.5909427903863399,
+        "time_at_hw_max_ratio": 0.0,
+        "late_vs_early_max_ratio": 1.0,
+        "segments": [
+          {
+            "label": "early",
+            "avg": 1368.005396233082,
+            "max": 1804.8
+          },
+          {
+            "label": "mid",
+            "avg": 1290.5914218175944,
+            "max": 1689.6
+          },
+          {
+            "label": "late",
+            "avg": 1357.923139647198,
+            "max": 1804.8
+          }
+        ]
+      },
+      {
+        "cluster": "mid",
+        "cpus": [
+          5,
+          6
+        ],
+        "hw_max_mhz": 2956.8,
+        "min_mhz": 499.2,
+        "max_mhz": 2956.8,
+        "avg_mhz": 881.5130258277396,
+        "avg_vs_hw_max": 0.29813075819390544,
+        "time_at_hw_max_ratio": 0.0019302914767255024,
+        "late_vs_early_max_ratio": 0.6493506493506493,
+        "segments": [
+          {
+            "label": "early",
+            "avg": 964.9602890665864,
+            "max": 2956.8
+          },
+          {
+            "label": "mid",
+            "avg": 844.69027128933,
+            "max": 1190.4
+          },
+          {
+            "label": "late",
+            "avg": 834.9689895891006,
+            "max": 1920.0
+          }
+        ]
+      },
+      {
+        "cluster": "big",
+        "cpus": [
+          2,
+          3,
+          4
+        ],
+        "hw_max_mhz": 3148.8,
+        "min_mhz": 614.4,
+        "max_mhz": 3148.8,
+        "avg_mhz": 975.2257885084298,
+        "avg_vs_hw_max": 0.30971347450089864,
+        "time_at_hw_max_ratio": 0.0021888668824840076,
+        "late_vs_early_max_ratio": 0.7134146341463414,
+        "segments": [
+          {
+            "label": "early",
+            "avg": 997.7970972046946,
+            "max": 3148.8
+          },
+          {
+            "label": "mid",
+            "avg": 875.8237572759881,
+            "max": 1075.2
+          },
+          {
+            "label": "late",
+            "avg": 1052.0580356063267,
+            "max": 2246.4
+          }
+        ]
+      },
+      {
+        "cluster": "prime",
+        "cpus": [
+          7
+        ],
+        "hw_max_mhz": 3398.4,
+        "min_mhz": 672.0,
+        "max_mhz": 3340.8,
+        "avg_mhz": 1024.8616151908655,
+        "avg_vs_hw_max": 0.3015718029634138,
+        "time_at_hw_max_ratio": 0.0010592020579816503,
+        "late_vs_early_max_ratio": 0.689655172413793,
+        "segments": [
+          {
+            "label": "early",
+            "avg": 975.8504769270205,
+            "max": 3340.8
+          },
+          {
+            "label": "mid",
+            "avg": 862.2061319523912,
+            "max": 1132.8
+          },
+          {
+            "label": "late",
+            "avg": 1234.667397100653,
+            "max": 2304.0
+          }
+        ]
+      }
+    ]
+  },
+  "gpu": {
+    "available": true,
+    "reason": null,
+    "source": "sidecar",
+    "hw_max_mhz": 1000.0,
+    "min_mhz": 231.0,
+    "max_mhz": 231.0,
+    "avg_mhz": 231.0,
+    "time_at_hw_max_ratio": 0.0,
+    "avg_busy_pct": 19.048659487025503,
+    "time_busy_high_ratio": 0.0,
+    "cap_min_mhz": 231.0,
+    "capped_time_ratio": 0.9822862239391453,
+    "thermal_pwrlevel_max": 13.0,
+    "segments": [
+      {
+        "label": "early",
+        "avg": 231.0,
+        "max": 231.0
+      },
+      {
+        "label": "mid",
+        "avg": 231.0,
+        "max": 231.0
+      },
+      {
+        "label": "late",
+        "avg": 231.0,
+        "max": 231.0
+      }
+    ]
+  },
+  "thermal": {
+    "available": true,
+    "reason": null,
+    "zones": [
+      {
+        "zone": "cpuss",
+        "source": "sidecar",
+        "start_c": 65.9,
+        "end_c": 52.800000000000004,
+        "max_c": 65.9,
+        "delta_c": -13.100000000000001,
+        "slope_c_per_min": -26.68024439918534
+      },
+      {
+        "zone": "gpuss",
+        "source": "sidecar",
+        "start_c": 55.6,
+        "end_c": 48.1,
+        "max_c": 55.6,
+        "delta_c": -7.5,
+        "slope_c_per_min": -15.274949083503055
+      },
+      {
+        "zone": "xo-therm",
+        "source": "sidecar",
+        "start_c": 45.513,
+        "end_c": 45.881,
+        "max_c": 45.881,
+        "delta_c": 0.3680000000000021,
+        "slope_c_per_min": 0.7494908350305542
+      },
+      {
+        "zone": "battery",
+        "source": "sidecar",
+        "start_c": 39.2,
+        "end_c": 39.5,
+        "max_c": 39.5,
+        "delta_c": 0.29999999999999716,
+        "slope_c_per_min": 0.6109979633401165
+      }
+    ],
+    "thermal_status_max": 1.0,
+    "thermal_status_ge_light_ratio": 1.0,
+    "thermal_status_ge_severe_ratio": 0.0,
+    "cpu_caps": [
+      {
+        "cluster": "little",
+        "policy": "policy0",
+        "hw_max_mhz": 2265.6,
+        "min_cap_mhz": 1689.6,
+        "min_cap_ratio": 0.7457627118644068,
+        "capped_time_ratio": 0.9691385085151879
+      },
+      {
+        "cluster": "big",
+        "policy": "policy2",
+        "hw_max_mhz": 3148.8,
+        "min_cap_mhz": 1075.2,
+        "min_cap_ratio": 0.34146341463414637,
+        "capped_time_ratio": 0.9691385085151879
+      },
+      {
+        "cluster": "mid",
+        "policy": "policy5",
+        "hw_max_mhz": 2956.8,
+        "min_cap_mhz": 1190.4,
+        "min_cap_ratio": 0.4025974025974026,
+        "capped_time_ratio": 0.9691385085151879
+      },
+      {
+        "cluster": "prime",
+        "policy": "policy7",
+        "hw_max_mhz": 3398.4,
+        "min_cap_mhz": 1132.8,
+        "min_cap_ratio": 0.3333333333333333,
+        "capped_time_ratio": 0.9691385085151879
+      }
+    ]
+  },
+  "sidecar_alignment": {
+    "available": true,
+    "reason": null,
+    "compared_samples": 220,
+    "match_ratio": 1.0,
+    "shifted_baseline_ratio": 0.720128361446054
+  }
+}

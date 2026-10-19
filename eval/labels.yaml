@@ -1,0 +1,31 @@
+# Human labels for the eval. One entry per trace.
+#
+# Labeling protocol (keep it blind):
+#   1. Record the trace (gpa record) and write `scenario` right away: what you did and what you expected.
+#   2. Open the trace in https://ui.perfetto.dev and look at it yourself BEFORE running `gpa analyze`
+#      or `eval/run_eval.py` on it. Fill in label / reason / labeler_confidence.
+#   3. Commit this file. The commit timestamp precedes the agent's output, which is the evidence
+#      that the label was not influenced by it.
+#
+# label: one of
+#   cpu_bound_main_thread | gpu_bound | scheduling_placement | thermal_throttling |
+#   io_or_other | no_clear_bottleneck | insufficient_data | TODO (= not labeled yet, skipped)
+#
+# Trace files live in traces/ and are git-ignored (size, licensing, device identifiers).
+
+traces:
+  - id: cytus2_a
+    trace: traces/cytus2_a.pftrace
+    package: com.rayark.cytus2
+    scenario: "Cytus II (Unity), 30 s, phone on USB charging after ~20 min of other recordings; content of the 30 s unknown (user was playing)."
+    label: TODO
+    reason: ""
+    labeler_confidence: ""
+
+  - id: dynamix_menu
+    trace: traces/dynamix_menu.pftrace
+    package: com.c4cat.dynamix
+    scenario: "Dynamix (Unity), 20 s idle on the first-launch language screen. Old sidecar version (no GPU cap / hw max)."
+    label: TODO
+    reason: ""
+    labeler_confidence: ""

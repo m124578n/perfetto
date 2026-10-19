@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+dist/
+*.egg-info/
+
+# Traces are never committed (size + licensing + device identifiers)
+traces/
+*.pftrace
+*.perfetto-trace
+*.pb
+*.sidecar.csv
+
+# Secrets
+.env
+
+# Eval run outputs that may contain raw model responses
+eval/results/raw/
+
+# Personal notes (interview prep) and the pre-implementation spec: kept local
+NOTES.md
+SPEC.md

@@ -1,0 +1,31 @@
+[project]
+name = "perfetto-game-agent"
+version = "0.1.0"
+description = "Triage mobile-game performance bottlenecks from Android Perfetto traces: deterministic metric extraction + LLM interpretation, validated by eval."
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.11"
+dependencies = [
+    "anthropic>=1.15.0",
+    # Pinned: the bundled trace_processor version (v57.2) defines table schemas we rely on.
+    "perfetto==0.58.2",
+    "pydantic>=2.7",
+    "pyyaml>=6.0.3",
+]
+
+[project.scripts]
+gpa = "gameperf_agent.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/gameperf_agent"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
